@@ -2,7 +2,7 @@ const { PDFDocument } = PDFLib
 
 async function fillForm(studentData) {
   // Fetch the PDF with form fields
-  const formUrl = 'https://sowdambikaa.edu.in/wp-content/uploads/2024/01/Sowdambikaa-Hallticket.pdf';
+  const formUrl = 'http://localhost/Sowdambikaa/wp-content/uploads/2024/01/Sowdambikaa-Hallticket.pdf';
   const formPdfBytes = await fetch(formUrl).then(res => res.arrayBuffer());
 
   // Load a PDF with form fields
@@ -21,12 +21,12 @@ async function fillForm(studentData) {
 
   studentName.setText(studentData.student_name);
   gender.setText(studentData.gender);
-  const examCenter = studentData.exam_center;
-  examCentre.setText(examCenter);
+  examCentre.setText(studentData.exam_center);
   rollNo.setText(studentData.roll_no);
   centreCode.setText(studentData.centre_code);
   qpVersion.setText(studentData.qp_version);
-	form.flatten();
+
+  form.flatten();
   // Serialize the PDFDocument to bytes (a Uint8Array)
   const pdfBytes = await pdfDoc.save();
 

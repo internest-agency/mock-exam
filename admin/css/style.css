@@ -1,0 +1,36 @@
+.hallticket-section{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.hallticket-section header{
+    text-align: center;
+}
+.hallticket-form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field{
+    display: flex;
+    flex-direction: column;
+    min-width: 500px;
+}
+.form-field input{
+    padding: 6px 16px;
+}
+
+.hallticket-section .download-button{
+    margin-top: 16px;
+    padding: 6px 16px;
+    background-color: #ED3B42;
+    color: white;
+}
+.optional-container p{
+    text-align: center;
+}
